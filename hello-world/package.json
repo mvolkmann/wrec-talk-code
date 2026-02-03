@@ -1,0 +1,13 @@
+{
+  "name": "hello-world",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "lit": "^3.3.2",
+    "wrec": "^0.18.5"
+  }
+}

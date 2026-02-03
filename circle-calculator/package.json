@@ -1,0 +1,12 @@
+{
+  "name": "circle-calculator",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "wrec": "^0.18.5"
+  }
+}

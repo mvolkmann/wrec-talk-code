@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module" src="toggle-buttons.js"></script>
+    <script type="module">
+      const tb = document.querySelector("toggle-buttons");
+      tb.addEventListener("change", (e) => {
+        console.log("detail =", e.detail);
+      });
+    </script>
+  </head>
+  <body>
+    <toggle-buttons labels="red,green,blue" value="this.color"></toggle-buttons>
+  </body>
+</html>
