@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script src="table-wired.js" type="module"></script>
+    <script type="module">
+      const propNames = ["name", "age", "occupation"];
+      const headings = ["Name", "Age", "Occupation"];
+      const data = [
+        { name: "Alice", age: 30, occupation: "Engineer" },
+        { name: "Bob", age: 25, occupation: "Designer" },
+        { name: "Charlie", age: 35, occupation: "Teacher" },
+      ];
+      const tableWired = document.querySelector("table-wired");
+      tableWired.propNames = propNames;
+      tableWired.headings = headings;
+      tableWired.data = data;
+    </script>
+  </head>
+  <body>
+    <table-wired></table-wired>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module" src="labeled-switch-claude.js"></script>
+  </head>
+  <body>
+    <h1>Labeled Switch using wrec</h1>
+
+    <div class="example">
+      <h2>Basic Usage</h2>
+      <div class="demo">
+        <labeled-switch label="WiFi"></labeled-switch>
+      </div>
+      <div class="demo">
+        <labeled-switch label="Bluetooth" checked></labeled-switch>
+      </div>
+      <div class="demo">
+        <labeled-switch label="Airplane Mode"></labeled-switch>
+      </div>
+    </div>
+
+    <div class="example">
+      <h2>Disabled State</h2>
+      <div class="demo">
+        <labeled-switch label="Location Services" disabled></labeled-switch>
+      </div>
+      <div class="demo">
+        <labeled-switch label="Auto-Updates" checked disabled></labeled-switch>
+      </div>
+    </div>
+
+    <div class="example">
+      <h2>Interactive Example</h2>
+      <div class="demo">
+        <labeled-switch id="dark-mode" label="Dark Mode"></labeled-switch>
+      </div>
+      <div class="status" id="status">
+        Status: <span id="status-text">OFF</span>
+      </div>
+    </div>
+
+    <div class="example">
+      <h2>Settings Panel</h2>
+      <div class="demo">
+        <labeled-switch
+          id="notifications"
+          label="Push Notifications"
+          checked
+        ></labeled-switch>
+      </div>
+      <div class="demo">
+        <labeled-switch
+          id="sounds"
+          label="Sound Effects"
+          checked
+        ></labeled-switch>
+      </div>
+      <div class="demo">
+        <labeled-switch id="vibration" label="Vibration"></labeled-switch>
+      </div>
+      <div class="demo">
+        <labeled-switch
+          id="auto-save"
+          label="Auto-Save"
+          checked
+        ></labeled-switch>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const darkModeSwitch = document.getElementById("dark-mode");
+        const statusText = document.getElementById("status-text");
+        const statusDiv = document.getElementById("status");
+
+        darkModeSwitch.addEventListener("change", (e) => {
+          const isOn = e.detail.value;
+          statusText.textContent = isOn ? "ON" : "OFF";
+          statusDiv.style.background = isOn ? "#2c2c2c" : "#f9f9f9";
+          statusDiv.style.color = isOn ? "#fff" : "#000";
+
+          console.log("Dark Mode changed:", {
+            tagName: e.detail.tagName,
+            property: e.detail.property,
+            oldValue: e.detail.oldValue,
+            value: e.detail.value,
+          });
+        });
+
+        // Log all switch changes
+        document.querySelectorAll("labeled-switch").forEach((sw) => {
+          sw.addEventListener("change", (e) => {
+            console.log(`${sw.label}: ${e.detail.value ? "ON" : "OFF"}`);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
