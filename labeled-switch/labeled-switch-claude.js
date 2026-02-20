@@ -90,4 +90,4 @@ class LabeledSwitch extends Wrec {
   }
 }
 
-LabeledSwitch.register();
+LabeledSwitch.define("labeled-switch");

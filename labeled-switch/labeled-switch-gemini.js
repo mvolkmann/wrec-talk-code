@@ -77,4 +77,4 @@ class LabeledSwitch extends Wrec {
 }
 
 // Register the component as <labeled-switch>
-LabeledSwitch.register();
+LabeledSwitch.define("labeled-switch");

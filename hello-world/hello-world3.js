@@ -15,4 +15,4 @@ class HelloWorld extends Wrec {
   static html = html`<h1>Hello, <span>this.name</span>!</h1>`;
 }
 
-HelloWorld.register();
+HelloWorld.define("hello-world");

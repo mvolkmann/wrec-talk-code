@@ -39,4 +39,4 @@ class NumberSlider extends Wrec {
   `;
 }
 
-NumberSlider.register();
+NumberSlider.define("number-slider");

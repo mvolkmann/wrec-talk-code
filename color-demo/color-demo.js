@@ -33,4 +33,4 @@ class ColorDemo extends Wrec {
   `;
 }
 
-ColorDemo.register();
+ColorDemo.define("color-demo");

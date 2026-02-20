@@ -52,4 +52,4 @@ class ToggleButtons extends Wrec {
   }
 }
 
-ToggleButtons.register();
+ToggleButtons.define("toggle-buttons");

@@ -54,4 +54,4 @@ class ColorPicker extends Wrec {
   }
 }
 
-ColorPicker.register();
+ColorPicker.define("color-picker");

@@ -116,4 +116,4 @@ class TableWired extends Wrec {
   }
 }
 
-TableWired.register();
+TableWired.define("table-wired");

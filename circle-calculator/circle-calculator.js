@@ -30,4 +30,4 @@ class CircleCalculator extends Wrec {
   `;
 }
 
-CircleCalculator.register();
+CircleCalculator.define("circle-calculator");
