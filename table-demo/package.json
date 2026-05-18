@@ -6,9 +6,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^8.0.3"
+    "vite": "^8.0.13"
   },
   "dependencies": {
-    "wrec": "^0.28.0"
+    "wrec": "^0.40.3"
   }
 }
