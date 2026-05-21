@@ -3,10 +3,10 @@
   "scripts": {
     "dev": "vite"
   },
-  "devDependencies": {
-    "vite": "^8.0.13"
-  },
   "dependencies": {
     "wrec": "^0.40.3"
+  },
+  "devDependencies": {
+    "vite": "^8.0.13"
   }
 }
