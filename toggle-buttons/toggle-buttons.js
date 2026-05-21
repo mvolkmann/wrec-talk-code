@@ -3,7 +3,7 @@ import { css, html, Wrec } from "wrec";
 class ToggleButtons extends Wrec {
   static properties = {
     labels: { type: String, usedBy: ["makeButtons"] },
-    value: { type: String },
+    value: { type: String, dispatch: true },
   };
 
   static css = css`
@@ -45,9 +45,7 @@ class ToggleButtons extends Wrec {
     const labelArray = this.labels.split(",");
     return labelArray.map((label) => {
       const classExpr = `this.value === '${label}' ? 'selected' : ''`;
-      return html`
-        <button class="${classExpr}" onClick="handleClick">${label}</button>
-      `;
+      return html` <button class="${classExpr}" onClick="handleClick">${label}</button> `;
     });
   }
 }

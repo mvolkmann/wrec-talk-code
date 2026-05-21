@@ -4,13 +4,22 @@
     <title>Color Demo</title>
     <script src="color-picker.js" type="module"></script>
     <script src="number-slider.js" type="module"></script>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+    </style>
   </head>
   <body>
     <form method="post" action="https://httpbin.org/post">
       <number-slider label="Score" name="score"></number-slider>
       <color-picker form-assoc="red: r, green: g, blue: b"></color-picker>
-      <button type="reset">Reset</button>
-      <button type="submit">Submit</button>
+      <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
     </form>
   </body>
 </html>
