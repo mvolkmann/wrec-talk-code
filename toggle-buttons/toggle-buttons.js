@@ -2,7 +2,7 @@ import { css, html, Wrec } from "wrec";
 
 class ToggleButtons extends Wrec {
   static properties = {
-    labels: { type: String, usedBy: ["makeButtons"] },
+    labels: { type: String, usedBy: "makeButtons" },
     value: { type: String, dispatch: true },
   };
 
@@ -38,7 +38,7 @@ class ToggleButtons extends Wrec {
   static html = "this.makeButtons()";
 
   handleClick(event) {
-    this.value = event.target.textContent.trim();
+    this.value = event.target.textContent;
   }
 
   makeButtons() {
